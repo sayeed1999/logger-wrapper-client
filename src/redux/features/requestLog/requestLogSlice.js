@@ -8,8 +8,8 @@ const thunks = [
     loadMore,
 ];
 
-const sqlLogSlice = createSlice({
-    name: 'sqlLogs',
+const requestLogSlice = createSlice({
+    name: 'requestLogs',
     initialState,
     reducers: {
         // loadMore: (state, _action) => {
@@ -43,5 +43,5 @@ const sqlLogSlice = createSlice({
     }
 });
 
-export default sqlLogSlice.reducer; // default export
-// export const { loadMore } = sqlLogSlice.actions; // export sync reducers
+export default requestLogSlice.reducer; // default export
+// export const { loadMore } = requestLogSlice.actions; // export sync reducers

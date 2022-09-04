@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from "react";
-import SqlLog from "./SqlLog";
+import RequestLog from "./RequestLog";
 import { useSelector, useDispatch } from 'react-redux';
-import fetchLogs from "../redux/features/sqlLog/thunks/fetchLogs";
-import loadMore from '../redux/features/sqlLog/thunks/loadMore';
+import fetchLogs from "../redux/features/RequestLog/thunks/fetchLogs";
+import loadMore from '../redux/features/RequestLog/thunks/loadMore';
 
-const SqlLogs = () => {
+const RequestLogs = () => {
     // console.log('re-rendered')
     const dispatch = useDispatch();
-    const logs = useSelector(state => state.sqlLogs.data);
+    const logs = useSelector(state => state.requestLogs.data);
+
     const listInnerRef = useRef();
 
     const onScroll = () => {
@@ -26,8 +27,8 @@ const SqlLogs = () => {
     }, []);
 
     return <div style={{ height: '90vh', overflowY: 'auto', border: 'solid 2px brown', padding: '4px' }} onScroll={onScroll} ref={listInnerRef}>
-        {logs.map((log, index) => <SqlLog key={index} log={log} />)}
+        {logs.map((log, index) => <RequestLog key={index} log={log} />)}
     </div>;
 };
 
-export default React.memo(SqlLogs);
+export default React.memo(RequestLogs);
