@@ -35,6 +35,8 @@ color: rebeccapurple;
     flex: 1;
 }
 
+.active{background-color: antiquewhite;}
+
 .log-properties{
     font-family: Consolas,Monaco,monospace;
     font-size: 12px;

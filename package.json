@@ -7,16 +7,21 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dev:build": "vite",
+    "prod:build": "vite build --mode production",
+    "uat:build": "vite --mode production"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
     "antd": "^4.22.7",
     "axios": "^0.27.2",
+    "env-cmd": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-json-view": "latest",
     "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
     "react-syntax-highlighter": "^15.5.0",
     "redux-logger": "^3.0.6",
     "sql-formatter": "latest"

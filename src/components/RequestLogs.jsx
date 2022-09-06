@@ -8,7 +8,7 @@ const RequestLogs = () => {
     // console.log('re-rendered')
     const dispatch = useDispatch();
     const logs = useSelector(state => state.requestLogs.data);
-    console.log(logs, 111)
+    console.log(logs, 111, import.meta.env)
 
     const listInnerRef = useRef();
 
