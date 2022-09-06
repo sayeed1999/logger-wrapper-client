@@ -8,16 +8,18 @@ const RequestLogs = () => {
     // console.log('re-rendered')
     const dispatch = useDispatch();
     const logs = useSelector(state => state.requestLogs.data);
+    console.log(logs, 111)
 
     const listInnerRef = useRef();
 
     const onScroll = () => {
-        // console.log('scroll on div happened')
+        console.log('scroll on div happened')
         if (listInnerRef.current) {
             const { scrollTop, scrollHeight, clientHeight } = listInnerRef.current;
-            if (scrollTop + clientHeight === scrollHeight) {
+            console.log('scroll on div happened 1', scrollTop + clientHeight, scrollHeight);
+            if (scrollTop + clientHeight + 1 >= scrollHeight) {
                 dispatch(loadMore());
-                // console.log('Reached bottom!');
+                console.log('Reached bottom!');
             }
         }
     };
@@ -26,8 +28,8 @@ const RequestLogs = () => {
         dispatch(fetchLogs());
     }, []);
 
-    return <div style={{ height: '90vh', overflowY: 'auto', border: 'solid 2px brown', padding: '4px' }} onScroll={onScroll} ref={listInnerRef}>
-        {logs.map((log, index) => <RequestLog key={index} log={log} />)}
+    return <div style={{ height: '100vh', overflowY: 'auto' }} className="request-log log-rows" onScroll={onScroll} ref={listInnerRef}>
+        {logs.map((logData, index) => <RequestLog key={index} log={logData} />)}
     </div>;
 };
 

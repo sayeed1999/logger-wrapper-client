@@ -1,0 +1,55 @@
+.log-collapse{
+
+}
+
+.request-log.log-row {
+    padding: 15px;
+}
+
+.anticon {
+    font-size: 10px;
+}
+.log-row{
+    display: flex;
+    border-left: 10px solid transparent;
+}
+.log-title{cursor: pointer;}
+.log-title span{
+    border-radius: 3px;
+    padding: 3px;
+    margin-right: 2px;
+    font-size:11px;
+    background-color: aliceblue;
+}
+.log-status-code{
+    color: #40c940;
+}
+.log-type{
+color: rebeccapurple;
+}
+.log-column-key{
+    flex: 0 250px;
+}
+
+.log-column-value{
+    flex: 1;
+}
+
+.log-properties{
+    font-family: Consolas,Monaco,monospace;
+    font-size: 12px;
+    padding: 13px 0;
+    padding: 15px 8px;
+}
+.log-column-property{
+    flex: 0 200px;
+}
+.log-column-property-value{}
+
+.log-row-collapsed{
+
+}
+.log-row-uncollapsed{
+    border-color:salmon;
+    background-color: #eafff7;
+}
